@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand palette (hex → HSL for Tailwind/shadcn) */
+    --primary: 174 84% 29%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 166 76% 90%;
+
+    --secondary: 222 47% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
+
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --rating: 38 92% 50%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 174 84% 29%;
+
+    --radius: 0.5rem;
+
+    /* Raw hex mirrors (documentation / non-Tailwind use) */
+    --color-primary-hex: #0d9488;
+    --color-primary-light-hex: #ccfbf1;
+    --color-secondary-hex: #1e293b;
+    --color-accent-hex: #f59e0b;
+    --color-muted-hex: #64748b;
+    --color-background-hex: #f8fafc;
+    --surface: 168 100% 99%;
+  }
+
+  .dark {
+    --primary: 174 72% 42%;
+    --primary-foreground: 222 47% 11%;
+    --primary-light: 166 40% 18%;
+
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 38 92% 50%;
+    --accent-foreground: 222 47% 11%;
+
+    --muted: 215 16% 65%;
+    --muted-foreground: 215 20% 65%;
+
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+
+    --card: 222 47% 14%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222 47% 14%;
+    --popover-foreground: 210 40% 98%;
+
+    --rating: 38 92% 55%;
+
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217 33% 22%;
+    --input: 217 33% 22%;
+    --ring: 174 72% 42%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-surface text-foreground antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  *:focus-visible {
+    outline: 2px solid #0d9488;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  button,
+  a,
+  [role="button"] {
+    min-height: 44px;
+  }
+}
